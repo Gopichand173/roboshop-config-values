@@ -1,4 +1,4 @@
-resource "vault_mount" "component" {
+resource "vault_mount" "secret-mounts" {
 #vault_mount means engine
 path        = "roboshop-dev"
 type        = "kv-v2"
