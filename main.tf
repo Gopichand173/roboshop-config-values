@@ -1,4 +1,5 @@
 resource "vault_mount" "component"
+#vault_mount means engine
 {
   path        = "cart-dev"
   type        = "kv-v2"
@@ -6,5 +7,5 @@ resource "vault_mount" "component"
     version = "2"
     type    = "kv-v2"
   }
-  description = "This is an example KV Version 2 secret engine mount"
+  description = "Cart-dev"
 }
