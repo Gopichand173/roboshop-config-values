@@ -9,3 +9,12 @@ type        = "kv-v2"
   }
   description = each.value["description"]
 }
+
+resource "vault_kv_secret_v2" "secrets" {
+  for_each            = var.secrets
+  mount               = each.value["secret_mount"]
+  name                = each.key
+  cas                 = 1
+  delete_all_versions = true
+  data_json_wo = jsonencode(each.value["kv"])
+}
