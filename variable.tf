@@ -61,8 +61,8 @@ variable "secret-mounts" {
      rabbitmq = {
        secret_mount = "roboshop-dev"
        kv = {
-	   APP_USER         = "roboshop"
-	   APP_PASSWORD     = "roboshop123",
+	   APP_USER         = "roboshop",
+	   APP_PASSWORD     = "roboshop123"
        }
      }
    }
