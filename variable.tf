@@ -6,6 +6,10 @@ variable "secret-mounts" {
 		 description = "roboshop project dev secrets"
 
 	  }
+    roboshop-infra = {
+	 description = "Roboshop project dev secrets"
+
+	  }
 	}
 }
  variable "secrets" {
@@ -22,10 +26,10 @@ variable "secret-mounts" {
 		secret_mount = "roboshop-dev"
         kv = {
           CATALOGUE_URL     = "http://catalogue-dev.gdevops72.com:8080/",
-          USER_URL = "http://user-dev.gdevops72.com:8080/",
-          CART_URL = "http://cart-dev.gdevops72.com:8080/",
-          SHIPPING_URL = "http://shipping-dev.gdevops72.com:8080/",
-          PAYMENT_URL = "http://payment-dev.gdevops72.com:8080/"
+          USER_URL          = "http://user-dev.gdevops72.com:8080/",
+          CART_URL          = "http://cart-dev.gdevops72.com:8080/",
+          SHIPPING_URL      = "http://shipping-dev.gdevops72.com:8080/",
+          PAYMENT_URL       = "http://payment-dev.gdevops72.com:8080/"
          }
 	 }
      catalogue = {
@@ -85,5 +89,12 @@ variable "secret-mounts" {
    	   AMQP_PASS     = "roboshop123"
        }
      }
+     ssh = {
+	   secret_mount = "roboshop-infra"
+       kv = {
+       username     = "ec2-user",
+       password     = "DevOps321"
+       }
+	 }
    }
  }
