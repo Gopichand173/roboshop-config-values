@@ -92,7 +92,7 @@ variable "secret-mounts" {
      ssh = {
 	   secret_mount = "roboshop-infra"
        kv = {
-       username     = "ec2-user",
+	   username     = "ec2-user",
        password     = "DevOps321"
        }
 	 }
