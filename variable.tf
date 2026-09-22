@@ -66,7 +66,7 @@ variable "secret-mounts" {
        secret_mount = "roboshop-dev"
        kv = {
 	   APP_USER         = "roboshop",
-	   APP_PASSWORD     = "roboshop123"
+	   APP_PASS     = "roboshop123"
        }
      }
      payment = {
