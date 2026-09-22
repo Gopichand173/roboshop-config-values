@@ -54,8 +54,8 @@ variable "secret-mounts" {
        kv = {
        CART_ENDPOINT     = "cart-dev.gdevops72.com:8080",
        DB_HOST = "mysql-dev.gdevops72.com",
-       User = "roboshop"
-       MYSQL
+       DB_USER = "root",
+       DB_PASS = "RoboShop@1"
        }
      }
      rabbitmq = {
