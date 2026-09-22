@@ -18,5 +18,15 @@ variable "secret-mounts" {
          CATALOGUE_PORT = 8080
        }
      }
+     frontend = {
+		secret_mount = "roboshop-dev"
+        kv = {
+          CATALOGUE URL     = "http://catalogue-dev.gdevops72.com:8080/",
+          USER URL = "http://user-dev.gdevops72.com:8080/",
+          CART URL = "http://shipping-dev.gdevops72.com:8080/",
+          SHIPPING URL = "http://shipping-dev.gdevops72.com:8080/",
+          PAYMENT URL = "http://shipping-dev.gdevops72.com:8080/"
+         }
+	 }
    }
  }
