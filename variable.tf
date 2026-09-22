@@ -28,5 +28,12 @@ variable "secret-mounts" {
           PAYMENT_URL = "http://shipping-dev.gdevops72.com:8080/"
          }
 	 }
+     cart = {
+		secret_mount = "roboshop-dev"
+        kv = {
+        MONGO_URL     = "mongodb://mongodb-dev.gdevops72.com:27017/catalogue",
+        MONGO = "true"
+       }
+	 }
    }
  }
