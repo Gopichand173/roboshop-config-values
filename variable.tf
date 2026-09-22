@@ -54,7 +54,8 @@ variable "secret-mounts" {
        kv = {
        CART_ENDPOINT     = "cart-dev.gdevops72.com:8080",
        DB_HOST = "mysql-dev.gdevops72.com",
-       MONGO_URL = "mongodb://mongodb-dev.gdevops72.com:27017/users"
+       User = "roboshop"
+       MYSQL
        }
      }
      rabbitmq = {
