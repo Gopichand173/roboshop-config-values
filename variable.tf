@@ -77,5 +77,13 @@ variable "secret-mounts" {
        AMQP_PASS = "roboshop123"
        }
 	 }
+     rabbitmq = {
+       secret_mount = "roboshop-dev"
+       kv = {
+   	   AMQP_HOST     = "rabbitmq-dev.gdevops72.com",
+   	   AMQP_USER     = "roboshop",
+   	   AMQP_PASS     = "roboshop123"
+       }
+     }
    }
  }
