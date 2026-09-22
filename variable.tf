@@ -13,8 +13,9 @@ variable "secret-mounts" {
 	   cart = {
 		 secret_mount = "roboshop-dev"
 		 kv = {
-                  zip = "zap",
-                  foo = "bar"
+			 REDIS_HOST         = "redis-dev.gdevops72.com",
+             CATALOGUE_HOST     = "catalogue-dev.gdevops72.com",
+             CATALOGUE_PORT     = 8080
          }
 
 	   }
