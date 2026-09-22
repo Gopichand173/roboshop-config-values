@@ -16,5 +16,5 @@ resource "vault_kv_secret_v2" "secrets" {
   name                = each.key
   cas                 = 1
   delete_all_versions = true
-  data_json_wo = jsonencode(each.value["kv"])
+  data_json = jsonencode(each.value["kv"])
 }
