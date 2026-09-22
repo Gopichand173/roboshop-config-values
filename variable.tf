@@ -43,5 +43,26 @@ variable "secret-mounts" {
         MONGO_URL = "mongodb://mongodb-dev.gdevops72.com:27017/users"
         }
 	 }
+     mysql = {
+        secret_mount = "roboshop-dev"
+        kv = {
+		ROOT_PASSWORD     = "RoboShop@1",
+       }
+	 }
+     shipping = {
+       secret_mount = "roboshop-dev"
+       kv = {
+       CART_ENDPOINT     = "cart-dev.gdevops72.com:8080",
+       DB_HOST = "mysql-dev.gdevops72.com",
+       MONGO_URL = "mongodb://mongodb-dev.gdevops72.com:27017/users"
+       }
+     }
+     rabbitmq = {
+       secret_mount = "roboshop-dev"
+       kv = {
+	   APP_USER         = "roboshop"
+	   APP_PASSWORD     = "roboshop123",
+       }
+     }
    }
  }
